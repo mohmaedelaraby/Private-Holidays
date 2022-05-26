@@ -72,6 +72,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:426px) {
+        height: 50vh;
+    }
     .inner{
         position: relative;
         width: 100%;
@@ -93,6 +96,13 @@ export default {
             height: 65%;
             bottom: 0;
             right: 20%;
+            @media (max-width:781px) {
+                width: 41%;
+            }
+            @media (max-width:426px) {
+                width: 68%;
+                right: 17%;
+            }
             
             p{
                 font-size: 25px;
@@ -101,14 +111,31 @@ export default {
                 padding-top: 25px;
                 padding-bottom: 25px;
                 overflow: hidden;
+                @media (max-width:426px) {
+                width: 50%;
+                right: 17%;
+                    font-size: 15px;
+    color: black;
+    font-weight: 100;
+        padding-top: 13px;
+    padding-bottom: 0px;
+    overflow: hidden;
+            }
 
 
             }
             label{
                 width: 300px;
                 overflow-x: hidden;
-                 overflow-y: hidden;
+                overflow-y: hidden;
                 margin-top: 15px;
+                @media (max-width:781px) {
+                width: 270px;
+                margin-top: 9px; }
+                @media (max-width:426px) {
+                        width: 262px;
+                        margin-top: 9px;
+                }
                
                 input{
                    
@@ -127,6 +154,7 @@ export default {
             .btn__area{
                 width: 100%;
                 margin-top: 50px;
+                @media (max-width: 426px){margin-top: 0;}
 
                 button{
                         margin-left: 7%;
@@ -136,6 +164,18 @@ export default {
                           border-radius: 41px;
                           border: none;
                           color: white;
+                          @media (max-width:781px) {margin-bottom: 15px;}
+                          @media (max-width: 426px) {
+                                  margin-top: 8px;
+                                  margin-left: 7%;
+    padding: 5px;
+    width: 27%;
+    background-color: #f31131;
+    border-radius: 41px;
+    border: none;
+    color: white;
+                          }
+                          
                           }
                           span{
                               color: green;

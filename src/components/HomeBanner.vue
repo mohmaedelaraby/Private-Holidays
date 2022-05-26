@@ -43,8 +43,11 @@ export default {
                 color: white;
                 font-size: 50px;
 
-                @media  (max-width:750px) {
+                @media  (max-width:770px) {
                     font-size: 30px;
+                }
+                 @media  (max-width:376px) {
+                    font-size: 20px;
                 }
             }
         }

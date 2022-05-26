@@ -73,6 +73,14 @@ h1{
   font-size: 50px;
   padding-top: 50px;
    padding-bottom: 30px;
+     @media  (max-width:770px) {
+                      font-size: 34px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+                }
+                 @media  (max-width:426px) {
+                    font-size: 26px;
+                }
 }
 .swiper__bg{
     background-color: #ecf0f1;
@@ -96,6 +104,13 @@ h1{
         color: black;
         font-weight: 400;
         margin-top: 15px;
+        @media  (max-width:770px) {
+                         font-size: 16px;
+                         font-weight: 500;
+                }
+                 @media  (max-width:426px) {
+                   font-size: 10px;
+                }
     }
     .slide__txt{
         width: 70%;
@@ -103,6 +118,15 @@ h1{
         font-weight: 200;
         color: black;
         margin-top: 15px;margin-bottom: 15px;
+        @media (max-width:770px) {
+          width: 67%;
+          font-size: 12px;
+        }
+        @media (max-width:426px) {
+          width: 67%;
+    font-size: 9px;
+        }
+          
     }
 }
 }

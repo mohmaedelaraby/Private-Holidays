@@ -79,10 +79,21 @@ h1{
   font-size: 50px;
   padding-top: 50px;
   padding-bottom: 30px;
+   @media  (max-width:770px) {
+                      font-size: 34px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+                }
+                 @media  (max-width:426px) {
+                    font-size: 26px;
+                }
 }
 .swiper__bg{
     background-color: #ecf0f1;
     height: 80vh;
+    @media (max-width: 426px) {
+      height:  171vh;
+    }
 
     .swiper-horizontal>.swiper-scrollbar{
         width: 100%;
@@ -101,6 +112,11 @@ h1{
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        @media (max-width: 426px) {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          
+        }
 
     }
     

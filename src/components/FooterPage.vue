@@ -40,7 +40,7 @@
 
 
             <div class="footer__list" >
-                <h6 class="footer__list__header">Popular destinations</h6>
+                <h6 class="footer__list__header tablet">Popular destinations</h6>
                 <ul>
                     <li class="footer__list__item">Leh-Ladakh</li>
                     <li class="footer__list__item">Manali</li>
@@ -96,6 +96,9 @@ background-color: #171d1c;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:426px) {
+        height: 274vh;
+    }
     .footer__container{
         overflow-y: hidden;
         width: 95%;
@@ -105,6 +108,9 @@ background-color: #171d1c;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @media (max-width:426px) {
+       flex-direction: column;
+    }
         .footer__list{
             flex: 1;
             display: flex;
@@ -113,17 +119,46 @@ background-color: #171d1c;
             justify-content: flex-start;
             padding-top: 45px;
             height: 100%;
+            @media (max-width: 780px) {
+               position: relative;
+            }
+            @media (max-width: 426px) {
+                width: 100%;
+            }
             .footer__list__header{
                 font-size: 16px;
                 color: white;
                  padding-bottom: 8px;
+                 @media (max-width: 780px) {
+                  
+                      font-size: 12px;
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start;
+            }
+             @media (max-width: 426px) {
+                 font-size: 22px;
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-right: 50px;
+            }
             }
             ul{
             list-style: none;
+            @media (max-width: 780px) {
+                margin-left: -37px;
+            }
             .footer__list__item{
                 font-size: 14px;
                 color: white;
                 padding-top: 8px;
+                @media (max-width: 780px) {
+                font-size: 11px;
+            }
+             @media (max-width:426px) {font-size: 20px;}
             }
 
             .footer__list__exception{
@@ -149,12 +184,19 @@ background-color: #171d1c;
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+                        @media (max-width: 780px) {
+                            font-size: 12px;
+                        }
+                         @media (max-width:426px) 
+                         {font-size: 18px;
+                         }
 
                         a{
                             text-decoration: none;
                             cursor: pointer;
                             font-size: 14;
                             color: white;
+                               @media (max-width:426px) {font-size: 18px;}
                         }
                     }
                 }
@@ -170,6 +212,12 @@ background-color: #171d1c;
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+                         @media (max-width: 780px) {
+                            font-size: 14px;
+                        }
+                         @media (max-width:426px) {font-size: 22px;
+                         justify-content: center;
+                         margin-bottom: 20px;}
 
                     }
                     .footer__info__lower__txt{
@@ -180,6 +228,12 @@ background-color: #171d1c;
                         align-items: center;
                         justify-content: flex-end;
                         white-space: pre;
+                         @media (max-width: 780px) {
+                            font-size: 12px;
+                        }
+                         @media (max-width:426px) {
+                             font-size: 18px;
+                             justify-content: center;}
 
                     }
 

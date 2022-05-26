@@ -53,6 +53,14 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media  (max-width:770px) {
+                      
+                         width: 48%;
+                     
+                }
+                 @media  (max-width:426px) {
+                    width: 86%;
+                }
     .cart__conatiner{
         width: 100%;
         height: 100%;  
@@ -111,6 +119,14 @@ export default {
                  border-radius: 41px;
                   border: none;
                  color: white;
+                 @media  (max-width:770px) {
+                         margin-bottom: 21px;
+                         width: 53%;
+                     
+                }
+                 @media  (max-width:426px) {
+                    
+                }
                  }
             }
          
