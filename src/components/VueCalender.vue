@@ -41,6 +41,9 @@ input{
   border: none;
   border-bottom: 1px solid gray;
   margin-left: 15px;
+   @media  (max-width:426px) {
+                     width: 60%;
+                }
 }
 
 </style>

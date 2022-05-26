@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 65%; height: fit-content;">
+  <div class="x" style="width: 65%; height: fit-content;">
   
     <Multiselect
       v-model="value"
@@ -7,12 +7,14 @@
       :placeholder="placeholder"
       :searchable="false"
       @click="$emit('result' , this.value )"
+      class="xxxx"
     />
   </div>
 </template>
 
 <script>
   import Multiselect from '@vueform/multiselect'
+  
 
   export default {
     components: {
@@ -32,6 +34,15 @@
 </script>
 
 <style src="@vueform/multiselect/themes/default.css">
+.xxxx{
+  background-color: red;
+}
+
+  .multiselect{
+    font-size: 10px;
+  }
+
+
 .multiselect-dropdown{
   z-index: 10000;
 }

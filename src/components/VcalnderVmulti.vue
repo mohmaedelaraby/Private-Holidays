@@ -27,9 +27,13 @@
 <script>
 import MulSelect from './MulSelect.vue';
 import VueCalender from './VueCalender.vue';
-
+import useVuelidate from '@vuelidate/core'
+import { required} from '@vuelidate/validators'
 
   export default {
+      setup () {
+    return { v$: useVuelidate() }
+  },
     components: { MulSelect, VueCalender },
     data(){
         return{
@@ -44,7 +48,11 @@ import VueCalender from './VueCalender.vue';
                 v4:" "
             }
         }
-    }, 
+    },validations () {
+    return {
+    res:{required }
+    }
+  }, 
     methods: {
     getPlace(name) {
       this.res.v1 = name;
@@ -58,11 +66,19 @@ import VueCalender from './VueCalender.vue';
    getEnd(name){
        this.res.v4=name;
    },
-   showvalues(){
+    async showvalues(e){
+        e.preventDefault();
        console.log("place" , this.res.v1);
        console.log("number of beds" , this.res.v2);
        console.log("start Date" , this.res.v3);
        console.log("End Date" , this.res.v4);
+       const result = await this.v$.$validate()
+      if (!this.v$.$error) {
+        console.log("DOne" , result)
+      }
+      else{
+          console.log("error")
+      }
    }
  }
    
@@ -87,6 +103,16 @@ import VueCalender from './VueCalender.vue';
     display: flex;
     align-items: center;
     justify-content: center;
+    @media  (max-width:770px) {
+                   top: 70%;
+                   width: 90%;
+                    height: 17%;
+                }
+                 @media  (max-width:426px) {
+                     top: 51%;
+                     width: 95%;
+                     height: 13%;
+                }
         .vcvm__form__choice
         {
             flex: 3;
@@ -107,6 +133,10 @@ import VueCalender from './VueCalender.vue';
                      border-radius: 41px;
                   border: none;
                      color: white;
+                     @media (max-width:780px) {
+                         width: 100%;
+                         margin-right: 20px;
+                     }
             }
            
         }

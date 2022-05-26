@@ -49,8 +49,8 @@ export default {
       email: { required, email } // Matches this.contact.email
     }
   },  methods: {
-     async submit () {
-         
+     async submit (e) {
+         e.preventDefault();
       const result = await this.v$.$validate()
       if (!this.v$.$error) {
         console.log("DOne" , result)

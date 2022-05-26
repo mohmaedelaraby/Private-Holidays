@@ -21,6 +21,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media  (max-width:770px) {
+                   height: 70vh;
+                }
+                 @media  (max-width:426px) {
+                    height: 50vh;
+                }
     .inner{
         position: relative;
         width: 100%;

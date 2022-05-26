@@ -11,7 +11,7 @@
     @slideChange="onSlideChange"
     class="swiper__bg"
   >
-     <swiper-slide v-for="item in 15" v-bind:key="item" class="slide">
+     <swiper-slide v-for="item in 5" v-bind:key="item" class="slide">
         <img src="@/assets/Clip.png" alt="slider" loading="lazy"/>
         <p class="slide__header">Tailor-Made Packages </p>
         <p class="slide__txt">When it comes to delivering the best planned holiday package to you, we strive to exceed your expectations. For us, it has to be spot-on. We do what we do in the ideal way possible.</p>

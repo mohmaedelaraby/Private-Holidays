@@ -10,7 +10,7 @@
     @slideChange="onSlideChange"
     class="swiper__bg"
   >
-     <swiper-slide v-for="item in 15" v-bind:key="item" class="slide">
+     <swiper-slide v-for="item in 5" v-bind:key="item" class="slide">
         <img src="@/assets/swiper.png" alt="slider" loading="lazy"/>
          <div class="inner__layout">
                 <p>ENJOY FREEDOM LAND</p>
