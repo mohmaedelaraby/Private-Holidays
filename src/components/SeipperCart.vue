@@ -7,16 +7,18 @@
                         <img v-bind:src="mainimage" alt="main" />
                     </div>
                      <div class="slider__images">
-                         <div class="slider__images__item" @click="PushImage(img1)" >
-                            <img src="@/assets/1.png" alt="main" />
+                        <!-- There is 2 bugs in change image , first the quilty of image and 
+                        second the cursor only work in the bottom of image -->
+                         <div class="slider__images__item"  >
+                            <img src="@/assets/1.png" alt="main" @click="PushImage(img1)" />
                          </div> 
 
-                         <div class="slider__images__item"  @click="PushImage(img2)">
-                              <img src="@/assets/2.png" alt="main" >
+                         <div class="slider__images__item"  >
+                              <img src="@/assets/2.png" alt="main" @click="PushImage(img2)" >
                          </div> 
 
-                         <div class="slider__images__item" @click="PushImage(img3)">
-                            <img src="@/assets/3.png" alt="main"/>
+                         <div class="slider__images__item" >
+                            <img src="@/assets/3.png" alt="main" @click="PushImage(img3)"/>
                          </div> 
                          
                      </div>
@@ -65,14 +67,22 @@ export default {
             img3:require("@/assets/1.png")
         }
     },
+     watch: {
+    // whenever question changes, this function will run
+    mainimage(newValue){
+        if(newValue===this.img1){alert("image1 is here")}
+        else if(newValue===this.img2){alert("image2 is here")}
+        else if(newValue===this.img3){alert("image3 is here")}
+    }
+  },
     methods:{
     PushImage(img) {
       this.mainimage = img;
-      alert("image",this.mainimage)
     },
     changeQoute(){
         alert("HI")
-    }
+    },
+  
     }
 }
 </script>
@@ -144,13 +154,12 @@ export default {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border: 1px solid blue;
+                      
                         cursor: pointer;
                         img{
                             width: 100%;
                             height: 100%;
-                            border: 1px solid red;
-                           
+                            border: 1px solid red;  
                         }
                     }
 
