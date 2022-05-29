@@ -38,6 +38,7 @@
 
 <script>
 //import SwipperOne from "./SwipperOne.vue";
+
 export default {
     components:{//SwipperOne
     },
