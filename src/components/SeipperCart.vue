@@ -61,10 +61,10 @@ export default {
     components:{//SwipperOne
     },data(){
         return{
-            mainimage:require("@/assets/4.png"),
-            img1:require("@/assets/3.png"),
+            mainimage:require("@/assets/1.png"),
+            img1:require("@/assets/1.png"),
             img2:require("@/assets/2.png"),
-            img3:require("@/assets/1.png")
+            img3:require("@/assets/3.png")
         }
     },
      watch: {
@@ -132,6 +132,7 @@ export default {
                      position: absolute;
                      height: 100%;
                      width: 100%;
+                     
                      
                  }
                   @media (max-width:780px) {
