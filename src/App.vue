@@ -7,6 +7,7 @@
     <VauldateSection/>
     <FooterPage/>
 
+
  
   </div>
 
@@ -22,6 +23,7 @@ import MiddelPage from './components/MiddelPage.vue';
 
 
 
+
 export default {
   name: 'App',
   components: {
@@ -30,6 +32,7 @@ export default {
     FooterPage,
     VauldateSection,
     MiddelPage,
+
 }
 }
 </script>

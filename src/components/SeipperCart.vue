@@ -3,7 +3,7 @@
         <div class="cart__conatiner">
             <div class="swipper__contianer">
                 <div class="swipper__contianer__slider">
-                   
+                   <img src="@/assets/Rectangle.png" alt="room"/>
                 </div>
             </div>
             <div class="cart__conatiner__info">
@@ -72,9 +72,22 @@ export default {
             align-items: center;
             justify-content: center;
             .swipper__contianer__slider{
-                width: 95%;
-                height: 95%;
-               
+                width: 100%;
+                height: 100%;
+                position: relative;
+                 img{
+                     position: absolute;
+                     height: 100%;
+                     @media (max-width:780px) {
+                         height: 100%;
+                         width: 100%;
+                     }
+                     @media (max-width:426px) {
+                         height: 100%;
+                         width: 100%;
+                     }
+
+                 }
                
             }
         }
