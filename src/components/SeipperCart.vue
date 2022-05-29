@@ -3,7 +3,23 @@
         <div class="cart__conatiner">
             <div class="swipper__contianer">
                 <div class="swipper__contianer__slider">
-                   <img src="@/assets/Rectangle.png" alt="room"/>
+                    <div class="main__img">
+                        <img v-bind:src="mainimage" alt="main" />
+                    </div>
+                     <div class="slider__images">
+                         <div class="slider__images__item" @click="PushImage(img1)" >
+                            <img src="@/assets/1.png" alt="main" />
+                         </div> 
+
+                         <div class="slider__images__item"  @click="PushImage(img2)">
+                              <img src="@/assets/2.png" alt="main" >
+                         </div> 
+
+                         <div class="slider__images__item" @click="PushImage(img3)">
+                            <img src="@/assets/3.png" alt="main"/>
+                         </div> 
+                         
+                     </div>
                 </div>
             </div>
             <div class="cart__conatiner__info">
@@ -41,7 +57,23 @@
 
 export default {
     components:{//SwipperOne
+    },data(){
+        return{
+            mainimage:require("@/assets/4.png"),
+            img1:require("@/assets/3.png"),
+            img2:require("@/assets/2.png"),
+            img3:require("@/assets/1.png")
+        }
     },
+    methods:{
+    PushImage(img) {
+      this.mainimage = img;
+      alert("image",this.mainimage)
+    },
+    changeQoute(){
+        alert("HI")
+    }
+    }
 }
 </script>
 
@@ -75,20 +107,56 @@ export default {
             .swipper__contianer__slider{
                 width: 100%;
                 height: 100%;
-                position: relative;
-                 img{
+               
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .main__img{
+                    flex: 3;
+                    width: 100%;
+                    background-color: red;
+                    position: relative;
+                     img{
                      position: absolute;
-                     height: 100%;
-                     @media (max-width:780px) {
-                         height: 100%;
-                         width: 100%;
+                     height: 130%;
+                     width: 100%;
+                 }
+                  @media (max-width:780px) {
+                         height: 130%;
+                         width: 80%;
                      }
                      @media (max-width:426px) {
-                         height: 100%;
+                         height: 130%;
                          width: 100%;
                      }
 
-                 }
+                }
+                .slider__images{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .slider__images__item{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid blue;
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid red;
+                           
+                        }
+                    }
+
+                    
+                }
+               
                
             }
         }
@@ -127,6 +195,7 @@ export default {
                 display: flex;
                 justify-content: flex-start;
                    button{
+                       margin-left: 15px;
                  padding: 12px;
                  width: 40%;
                   background-color: #f31131;
