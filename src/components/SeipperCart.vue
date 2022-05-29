@@ -126,12 +126,13 @@ export default {
                 .main__img{
                     flex: 3;
                     width: 100%;
-                    background-color: red;
+
                     position: relative;
                      img{
                      position: absolute;
-                     height: 130%;
+                     height: 100%;
                      width: 100%;
+                     
                  }
                   @media (max-width:780px) {
                          height: 130%;
@@ -159,7 +160,7 @@ export default {
                         img{
                             width: 100%;
                             height: 100%;
-                            border: 1px solid red;  
+                             
                         }
                     }
 
