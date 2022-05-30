@@ -7,8 +7,7 @@
     :space-between="50"
     navigation
     :pagination="{ clickable: true }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
+   
     class="swiper__bg"
   >
      <swiper-slide v-for="item in 15" v-bind:key="item" class="slide">
@@ -46,15 +45,9 @@ import SeipperCart from './SeipperCart.vue';
     SeipperCart
 },
     setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
+      
       return {
-        onSwiper,
-        onSlideChange,
+     
         modules: [Navigation, Pagination, Scrollbar, A11y], 
         speed: 500,
          navigation: {

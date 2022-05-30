@@ -9,6 +9,7 @@
 </template>
 
 <script>
+//this component for each line of footer if we needed to be dynamic
 export default {
      name: 'FooterLine',
      props:['fo', 'list']

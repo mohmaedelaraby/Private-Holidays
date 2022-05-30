@@ -6,9 +6,6 @@
     <MiddelPage/>
     <VauldateSection/>
     <FooterPage/>
-
-
- 
   </div>
 
 </template>
