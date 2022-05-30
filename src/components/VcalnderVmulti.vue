@@ -74,10 +74,10 @@ import { required} from '@vuelidate/validators'
        console.log("End Date" , this.res.v4);
        const result = await this.v$.$validate()
       if (!this.v$.$error) {
-        console.log("DOne" , result)
+        console.log("Done sending==>" , result)
       }
       else{
-          console.log("error")
+          console.log("error in sending form")
       }
    }
  }
