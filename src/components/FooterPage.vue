@@ -40,8 +40,10 @@
 
 
             <div class="footer__list" >
-                <h6 class="footer__list__header tablet">Popular destinations</h6>
-                <ul>
+                <h6 class="footer__list__header">Popular destinations</h6>
+                <div class="exception">
+                        <div>
+                     <ul>
                     <li class="footer__list__item">Leh-Ladakh</li>
                     <li class="footer__list__item">Manali</li>
                     <li class="footer__list__item">Ooty</li>
@@ -50,14 +52,10 @@
                     <li class="footer__list__item">Goa</li>
                     <li class="footer__list__item">Mahabaleshwar</li>
                     <li class="footer__list__item">Agra</li>
-                </ul>
-            </div>
-
-
-            
-            <div class="footer__list" >
-                <h6 class="footer__list__header" style="color: black;"> .</h6>
-                 <ul>
+                     </ul>
+                </div>
+               <div>
+                    <ul>
                     <li class="footer__list__item">Coorg</li>
                     <li class="footer__list__item">Mysore</li>
                     <li class="footer__list__item">Gir</li>
@@ -66,7 +64,12 @@
                     <li class="footer__list__item">Kodaikanal</li>
                     <li class="footer__list__item">Shimla</li>
                 </ul>
+               </div>
+                </div>
+                
             </div>
+
+
 
 
             <div class="footer__info">
@@ -124,6 +127,11 @@ background-color: #171d1c;
             }
             @media (max-width: 426px) {
                 width: 100%;
+            }
+            .exception{
+           
+                display: flex;
+                align-items: center;
             }
             .footer__list__header{
                 font-size: 16px;
