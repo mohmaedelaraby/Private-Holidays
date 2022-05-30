@@ -54,7 +54,7 @@ export default {
     },
     methods: {
         toggleNavBar() {
-            console.log("==>", this.mobileNav)
+        
             this.mobileNav = !this.mobileNav;
         },
         checkWidth() {
