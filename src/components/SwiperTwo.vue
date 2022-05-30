@@ -105,7 +105,7 @@ h1{
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40%;
+            width: 38%;
             height: 20%;
             bottom: 30%;
             background-color: white;

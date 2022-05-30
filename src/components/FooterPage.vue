@@ -168,12 +168,7 @@ background-color: #171d1c;
             }
              @media (max-width:426px) {font-size: 20px;}
             }
-
-            .footer__list__exception{
-                display: flex;
-                flex-direction: row;
-            }
-
+            
             }
         }
 

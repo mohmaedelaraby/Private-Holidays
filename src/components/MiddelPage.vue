@@ -19,7 +19,3 @@ export default {
     components: { VcalnderVmulti, SwiperTwo, SwipperThree, NestedSwipper }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
