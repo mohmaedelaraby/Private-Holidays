@@ -49,8 +49,8 @@ export default {
       email: { required, email } // Matches this.contact.email
     }
   },  methods: {
-     async submit (e) {
-         e.preventDefault();
+     async submit () {
+       
       const result = await this.v$.$validate()
       if (!this.v$.$error) {
         console.log("DOne" , result)
@@ -133,7 +133,7 @@ export default {
                 width: 270px;
                 margin-top: 9px; }
                 @media (max-width:426px) {
-                        width: 262px;
+                        width: 242px;
                         margin-top: 9px;
                 }
                
