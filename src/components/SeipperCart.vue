@@ -4,8 +4,8 @@
             <div class="swipper__contianer">
                 <div class="swipper__contianer__slider">
                     <div class="main__img">
-                        <img v-bind:src="mainimage" alt="main" 
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="222" ref="main"/>
+                        <img v-bind:src="mainimage" alt="main" data-bs-toggle="tooltip" data-bs-placement="right"
+                            title="222" ref="main" />
                     </div>
                     <div class="slider__images">
                         <!-- There is 2 bugs in change image , first the quilty of image and 
@@ -31,9 +31,13 @@
                     Retreats’ finest villas in Mauritius.</p>
                 <div class="icons">
 
-                    <span class="icons__item">
+                    <div class="icons__item"
+                    data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="bedroom"
+                  ref="bed">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            data-bs-toggle="tooltip" data-bs-placement="right" title="2" ref="bed">
+                            >
                             <g id="bed" transform="translate(-410 -2050)">
                                 <g id="bed-2" data-name="bed" transform="translate(408.578 2041.499)">
                                     <path id="Path_73" data-name="Path 73"
@@ -45,22 +49,28 @@
                             </g>
                         </svg>
 
-                    </span>
+                    </div>
 
-                    <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            data-bs-toggle="tooltip" data-bs-placement="right" title="4" ref="bath">
+                    <div class="icons__item"
+                    data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="bath"
+                  ref="bath">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path id="Color_Overlay" data-name="Color Overlay"
                                 d="M490.993,2074l-.437-1.763a38.127,38.127,0,0,1-13.12,0L477,2074h-.8l.331-2.053c-1.545-.855-2.216-3.411-2.563-5-.284-1.3-.743-3.373-.982-4.45.373.008.757.022,1.154.031a1.738,1.738,0,0,0,.2.451l2.573,3.554.868-1.557-1.293-2.391c.4.008.819.014,1.237.021,1,.011,2.035.023,3.086.033s2.119.009,3.186.015,2.137-.008,3.187-.015,2.085-.025,3.086-.035c1.7-.021,3.307-.074,4.734-.109-.238,1.076-.7,3.153-.983,4.451-.346,1.586-1.017,4.142-2.562,5l.331,2.053Zm-16.533-11.228a1.732,1.732,0,0,1-.045-1.582l2.094-4.032.005.008c.025-.044.045-.094.074-.136a1.118,1.118,0,0,1,.9-.584.912.912,0,0,1,.538.187l.014.012,2.359,1.314,3.4-.578.184,1.72.5-.412c.345-.288.76-.147,1.012.339l.855,1.647h8.3c1.535,0,1.336,1.578,1.336,1.578H476.309l-.22-.407,1.15-2.637-1.374,2.658,1.681,3.111-.647,1.16Zm5.914-2.1h1.72l1.8-1.5-3.412,1.066a.4.4,0,0,1-.086.017h-.012c-.017,0-.034,0-.052,0l-1.629-2.685Zm-8.366,1.578s-.2-1.578,1.336-1.578h1.035l-.109.348a2.17,2.17,0,0,0-.177,1.229Zm14.308-4.7c0-.718.32-1.076.641-1.076s.641.358.641,1.076-.32,1.074-.641,1.074S486.317,2058.271,486.317,2057.555Zm2.506-1.519c0-.446.2-.668.4-.668s.4.222.4.668-.2.669-.4.669S488.822,2056.482,488.822,2056.036Zm-13.1-1.117a4.045,4.045,0,0,1,.219-3.782,1.284,1.284,0,0,1,1.016-.612,1.48,1.48,0,0,1,1.236.979,4.04,4.04,0,0,1-.218,3.778,1.287,1.287,0,0,1-1.018.615A1.479,1.479,0,0,1,475.724,2054.919Zm12.02.139c0-.291.13-.436.26-.436s.26.145.26.436-.13.437-.26.437S487.743,2055.349,487.743,2055.057Zm.79-2.06c0-.576.257-.863.515-.863s.515.287.515.863-.257.864-.515.864S488.534,2053.573,488.534,2053Zm2.668-2.007c0-.291.13-.437.26-.437s.26.146.26.437-.13.438-.26.438S491.2,2051.282,491.2,2050.99Zm-3.752-.321c0-.446.2-.669.4-.669s.4.222.4.669-.2.667-.4.667S487.449,2051.114,487.449,2050.669Z"
                                 transform="translate(-472 -2050)" fill="#454851" />
                         </svg>
 
-                    </span>
+                    </div>
 
 
-                    <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
-                            data-bs-toggle="tooltip" data-bs-placement="right" title=" beach" ref="beach">
+                    <div class="icons__item"
+                    data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="beach"
+                  ref="beach">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                             <g id="beachfront" transform="translate(-537 -2054)">
                                 <g id="beachfront-2" data-name="beachfront" transform="translate(536.285 2053.31)">
                                     <path id="Path_95" data-name="Path 95"
@@ -78,12 +88,10 @@
                             </g>
                         </svg>
 
-                    </span>
+                    </div>
 
-
-                    <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
-                            data-bs-toggle="tooltip" data-bs-placement="right" title="Pool" ref="pool">
+                    <div class="icons__item" data-bs-toggle="tooltip" data-bs-placement="right" title="Pool" ref="pool">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                             <g id="pool" transform="translate(-574 -2054)">
                                 <g id="pool-2" data-name="pool" transform="translate(573.998 2052.786)">
                                     <path id="Path_103" data-name="Path 103"
@@ -98,7 +106,7 @@
                                     fill="#454851" />
                             </g>
                         </svg>
-                    </span>
+                    </div>
                 </div>
                 <div class="btn__area"><button>Book Now</button></div>
             </div>
@@ -110,17 +118,17 @@
 //import SwipperOne from "./SwipperOne.vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { Tooltip } from "bootstrap"
+import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 
-new Tooltip(document.body, {
-    selector: "[data-bs-toggle='tooltip']",
-})
 
 export default {
     components: {//SwipperOne
     }, mounted() {
-        console.log(this.$refs.bed);
-        new Tooltip(this.$refs.bed);
+          new Tooltip(this.$refs.bed)
+            new Tooltip(this.$refs.bath)
+              new Tooltip(this.$refs.beach)
+                new Tooltip(this.$refs.pool)
+     
     }, data() {
         return {
             mainimage: require("@/assets/1.png"),
@@ -166,9 +174,10 @@ export default {
         width: 100%;
         height: 100%;
         display: flex;
-         @media (max-width:426px) {
-      flex-direction: column;
-    }
+
+        @media (max-width:426px) {
+            flex-direction: column;
+        }
 
         .swipper__contianer {
             flex: 1;
