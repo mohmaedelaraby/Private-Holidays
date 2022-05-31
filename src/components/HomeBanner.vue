@@ -27,6 +27,9 @@ export default {
                  @media  (max-width:426px) {
                     height: 50vh;
                 }
+                 @media  (max-width:320px) {
+                    height: 20vh;
+                }
     .inner{
         position: relative;
         width: 100%;

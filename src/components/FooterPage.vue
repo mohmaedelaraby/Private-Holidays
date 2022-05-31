@@ -1,8 +1,8 @@
 <template>
-    <div class="footer">
-        <div class="footer__container">
-
-            <div class="footer__list" >
+<section>
+<div class="row" >
+    <div class="col-sm-4 col-lg-2 col-xs-12" >
+    <div class="footer__list" >
                 <h6 class="footer__list__header">Information</h6>
                 <ul>
                     <li class="footer__list__item">About us</li>
@@ -15,7 +15,9 @@
                 </ul>
             </div>
 
-            <div class="footer__list" >
+    </div>
+    <div class="col-sm-4 col-lg-2 col-xs-12">
+      <div class="footer__list" >
                 <h6 class="footer__list__header">Experiences</h6>
                 <ul>
                     <li class="footer__list__item">Beach </li>
@@ -28,17 +30,17 @@
                      <li class="footer__list__item">Hill station</li>
                 </ul>
             </div>
-
-            <div class="footer__list" >
+    </div>
+    <div class="col-sm-4 col-lg-2 col-xs-12"> 
+    <div class="footer__list" >
                 <h6 class="footer__list__header">Themes</h6>
                 <ul>
                     <li class="footer__list__item">Party</li>
                     <li class="footer__list__item">Wedding</li>
                     <li class="footer__list__item">Group tours</li>
                 </ul>
-            </div>
-
-
+            </div></div>
+    <div class="col-sm-4 col-lg-3 col-xs-12" >
             <div class="footer__list" >
                 <h6 class="footer__list__header">Popular destinations</h6>
                 <div class="exception">
@@ -67,11 +69,9 @@
                </div>
                 </div>
                 
-            </div>
-
-
-
-
+            </div></div>
+    <div class="col-sm-7 col-lg-3 col-xs-12">
+    
             <div class="footer__info">
                 <div class="footer__info__upper">
                    <div>Phone : <a href="Tel: +91-80-41127931" rel="noreffere noopener" target="_blank"> +91-80-41127931</a></div>
@@ -86,35 +86,26 @@
                           <p  class="footer__info__lower__txt">Romania</p>
                 </div>
             </div>
-
-        </div>
     </div>
+</div>
+</section>
+
+    
 </template>
 
 <style lang="scss" scoped>
-.footer{
+section{
+    background-color:black;
     width: 100%;
-    height: 40vh;
-background-color: #171d1c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media (max-width:426px) {
-        height: 274vh;
+    
+    @media (max-width: 325px) {
+        height: 195vh;
     }
-    .footer__container{
-        overflow-y: hidden;
-        width: 95%;
-        height: 95%;
-        
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        @media (max-width:426px) {
-       flex-direction: column;
-    }
-        .footer__list{
+    .row{
+        width: 100%;
+    
+
+            .footer__list{
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -132,32 +123,44 @@ background-color: #171d1c;
            
                 display: flex;
                 align-items: center;
+                  @media (max-width: 426px) {
+                 flex-direction: column;
+                 width: 100%;
+                 ul{
+                   
+                     width: 100%;
+
+                     
+                 }
+                
+                    
+            }
+                
             }
             .footer__list__header{
-                font-size: 16px;
+                font-size: 18px;
                 color: white;
                  padding-bottom: 8px;
                  @media (max-width: 780px) {
                   
                       font-size: 12px;
-                      width: 100%;
-                      display: flex;
+                     display: flex;
                       align-items: center;
                       justify-content: flex-start;
             }
              @media (max-width: 426px) {
                  font-size: 22px;
-                      width: 100%;
+                     
                       display: flex;
                       align-items: center;
                       justify-content: center;
-                      margin-right: 50px;
+                    
             }
             }
             ul{
             list-style: none;
-            @media (max-width: 780px) {
-                margin-left: -37px;
+            @media (max-width: 325px) {
+                  width: 43%;
             }
             .footer__list__item{
                 font-size: 14px;
@@ -182,6 +185,12 @@ background-color: #171d1c;
                 .footer__info__upper{
                     display: flex;
                     flex-direction: column;
+                    color: white;
+                    @media (max-width:426px) 
+                         {font-size: 18px;
+                         justify-content: center;
+                         margin-top: 20px;
+                         }
                     div{
                         width: 100%;
                         display: flex;
@@ -192,6 +201,7 @@ background-color: #171d1c;
                         }
                          @media (max-width:426px) 
                          {font-size: 18px;
+                         justify-content: center;
                          }
 
                         a{
@@ -218,9 +228,12 @@ background-color: #171d1c;
                          @media (max-width: 780px) {
                             font-size: 14px;
                         }
-                         @media (max-width:426px) {font-size: 22px;
+                         @media (max-width:426px) {
+                             color: white;
+                          font-size: 22px;
                          justify-content: center;
-                         margin-bottom: 20px;}
+                         margin-bottom: 20px;
+                         margin-top: 40px;}
 
                     }
                     .footer__info__lower__txt{
@@ -243,7 +256,8 @@ background-color: #171d1c;
                 }
 
             } 
-    }
-} 
 
+}}
+
+    
 </style>

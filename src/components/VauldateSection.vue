@@ -17,8 +17,8 @@
                     <div v-if="v$.message.$error">Message field has an error.</div>
                 </label>
                 <div class="btn__area">
-                <button @click="submit()">SEND</button>
-                <span v-if="done"> Succesful Send </span>
+                    <button @click="submit()">SEND</button>
+                    <span v-if="done"> Succesful Send </span>
 
                 </div>
             </div>
@@ -30,159 +30,182 @@
 import useVuelidate from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 export default {
-  setup () {
-    return { v$: useVuelidate() }
-  },
-  
-  data () {
-    return {
-      Name: '',
-      message: '',
-    email: '',
-    done:false
+    setup() {
+        return { v$: useVuelidate() }
+    },
+
+    data() {
+        return {
+            Name: '',
+            message: '',
+            email: '',
+            done: false
+        }
+    },
+    validations() {
+        return {
+            Name: { required }, // Matches this.firstName
+            message: { required }, // Matches this.lastName
+            email: { required, email } // Matches this.contact.email
+        }
+    }, methods: {
+        async submit() {
+
+            const result = await this.v$.$validate()
+            if (!this.v$.$error) {
+                console.log("DOne", result)
+                this.done = true;
+            }
+            else {
+                console.log("error")
+            }
+            // perform async actions
+
+        }
     }
-  },
-  validations () {
-    return {
-      Name: { required }, // Matches this.firstName
-      message: { required }, // Matches this.lastName
-      email: { required, email } // Matches this.contact.email
-    }
-  },  methods: {
-     async submit () {
-       
-      const result = await this.v$.$validate()
-      if (!this.v$.$error) {
-        console.log("DOne" , result)
-        this.done=true;
-      }
-      else{
-          console.log("error")
-      }
-      // perform async actions
-      
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-.outer{
+.outer {
     height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width:426px) {
-        height: 50vh;
+    @media (max-width:770px) {
+        height: 41vh;
     }
-    .inner{
+
+    @media (max-width:426px) {
+        height: 33vh;
+    }
+
+    .inner {
         position: relative;
         width: 100%;
         height: 100%;
-        
-        img{
+
+        img {
             position: absolute;
             width: 100%;
             height: 100%;
             filter: brightness(1);
         }
-        .inner__layout{
+
+        .inner__layout {
             position: absolute;
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: white;
             width: 24%;
-            height: 65%;
+            height: 45%;
             bottom: 0;
             right: 20%;
+
             @media (max-width:781px) {
-                width: 41%;
+                width: 45%;
+                height: 72%;
             }
+
             @media (max-width:426px) {
-                width: 68%;
-                right: 17%;
+                width: 90%;
+                left: 5%;
             }
-            
-            p{
+
+            p {
                 font-size: 25px;
                 color: black;
                 font-weight: 100;
                 padding-top: 25px;
                 padding-bottom: 25px;
                 overflow: hidden;
+
                 @media (max-width:426px) {
-                width: 50%;
-                right: 17%;
+                    width: 50%;
+                    right: 17%;
                     font-size: 15px;
-    color: black;
-    font-weight: 100;
-        padding-top: 13px;
-    padding-bottom: 0px;
-    overflow: hidden;
-            }
+                    color: black;
+                    font-weight: 100;
+                    padding-top: 13px;
+                    padding-bottom: 0px;
+                    overflow: hidden;
+                }
 
 
             }
-            label{
+
+            label {
                 width: 300px;
                 overflow-x: hidden;
                 overflow-y: hidden;
                 margin-top: 15px;
+
                 @media (max-width:781px) {
-                width: 270px;
-                margin-top: 9px; }
-                @media (max-width:426px) {
-                        width: 242px;
-                        margin-top: 9px;
+                    width: 270px;
+                    margin-top: 5px;
                 }
-               
-                input{
-                   
+
+                @media (max-width:426px) {
+                    width: 242px;
+                    margin-top: 9px;
+                }
+
+                input {
+
                     height: 25px;
                     width: 100%;
                     border: none;
                     border-bottom: 1px solid gray;
                     outline: none;
                 }
-                div{
+
+                div {
                     font-size: 10px;
                     color: red;
                 }
             }
 
-            .btn__area{
+            .btn__area {
                 width: 100%;
                 margin-top: 50px;
-                @media (max-width: 426px){margin-top: 0;}
 
-                button{
+                @media (max-width: 426px) {
+                    margin-top: 0;
+                }
+
+                button {
+                    margin-left: 7%;
+                    padding: 12px;
+                    width: 28%;
+                    background-color: #f31131;
+                    border-radius: 41px;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+
+                    @media (max-width:781px) {
+                        margin-bottom: 15px;
+                    }
+
+                    @media (max-width: 426px) {
+                        margin-top: 8px;
                         margin-left: 7%;
-                         padding: 12px;
-                         width: 28%;
-                          background-color: #f31131;
-                          border-radius: 41px;
-                          border: none;
-                          color: white;
-                          @media (max-width:781px) {margin-bottom: 15px;}
-                          @media (max-width: 426px) {
-                                  margin-top: 8px;
-                                  margin-left: 7%;
-    padding: 5px;
-    width: 27%;
-    background-color: #f31131;
-    border-radius: 41px;
-    border: none;
-    color: white;
-                          }
-                          
-                          }
-                          span{
-                              color: green;
-                          }
+                        padding: 5px;
+                        width: 27%;
+                        background-color: #f31131;
+                        border-radius: 41px;
+                        border: none;
+                        color: white;
+                    }
+
+                }
+
+                span {
+                    color: green;
+                }
             }
         }
     }
 }
-
 </style>

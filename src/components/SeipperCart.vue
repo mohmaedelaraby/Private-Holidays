@@ -4,7 +4,8 @@
             <div class="swipper__contianer">
                 <div class="swipper__contianer__slider">
                     <div class="main__img">
-                        <img v-bind:src="mainimage" alt="main" />
+                        <img v-bind:src="mainimage" alt="main" 
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="222" ref="main"/>
                     </div>
                     <div class="slider__images">
                         <!-- There is 2 bugs in change image , first the quilty of image and 
@@ -31,33 +32,58 @@
                 <div class="icons">
 
                     <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22"
-                            height="16" viewBox="0 0 22 16">
-                            <image id="bed" width="22" height="16"
-                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABcUlEQVQ4jdWTOUsEQRCFv9XV9UJdEVZEBMErGxTFhg6MBAMTf4CImYGBsYihgeH+DtlI8BeMDILBRN5nsCjKYuCBIioFNTIMrcyykQ+anumufv3qVXVmZnaelGjR+SW+aI3nDM7qPAqMAIPAMNAPFIBeoBVoS5x7Ap6Bsh+Ed8ANcAKcAcfWeEcR8aHjUlEWHZLvN13PqfpuFTPmOJvJxn5OgTXgArgCKmn8AbqAAR2bwFDcCkEZ2E5J9gNrvIqKOPCDcMVFHIeka4E+4BXYB651X5RNAk1ikx+Ee9Z470kCF3E7sKMFjPCpNjUDG+JhbO/cD8I5azwRcBsJiNqtE/jQaichhfpS5S4rnCmL4iVgAcjrEKJGnRsS8XL5g6qSAl/6QXivGUlLdmimu0K8CEz/4rVLSI+OqT/iCnUpCavG/yMWz0rAhBZAXl0tkMJJ0UtCXATGgUdgtVrWeLv5QbgOGGu8YvRAlrVXa8UWUA/wDW0zUkHLMW9tAAAAAElFTkSuQmCC" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            data-bs-toggle="tooltip" data-bs-placement="right" title="2" ref="bed">
+                            <g id="bed" transform="translate(-410 -2050)">
+                                <g id="bed-2" data-name="bed" transform="translate(408.578 2041.499)">
+                                    <path id="Path_73" data-name="Path 73"
+                                        d="M25.074,21.372a.725.725,0,0,0-.787-.3,14.312,14.312,0,0,1-3.76.485,12.416,12.416,0,0,1-3.532-.487,21.9,21.9,0,0,0-5.855-.6,81.386,81.386,0,0,0-8.85.577c-.491.062-.868.69-.868,1.442v6.391c0,.8.423,1.448.948,1.448h.119L2.844,32.5h.948l.355-2.172h18.63l.355,2.172h.948l.355-2.172h.041c.523,0,.946-.649.946-1.448V22.488A1.831,1.831,0,0,0,25.074,21.372Zm-4.832-2.819H13.821c0-1.156,1.437-2.091,3.211-2.091S20.242,17.4,20.242,18.553Zm-7.267,0H6.553c0-1.156,1.437-2.091,3.211-2.091S12.975,17.4,12.975,18.553ZM4.184,12.625A43.318,43.318,0,0,1,13.421,11.4a43.347,43.347,0,0,1,9.237,1.23v5.945h1.894V10.184l-.782-.214A45.3,45.3,0,0,0,13.42,8.5,45.3,45.3,0,0,0,3.07,9.97l-.78.214v8.687H4.184Z" />
+                                </g>
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M431.71,2074l-.355-2.172h-18.63l-.355,2.172h-.948l-.355-2.172h-.119c-.525,0-.948-.649-.948-1.447v-6.392c0-.751.377-1.38.868-1.441a81.143,81.143,0,0,1,8.85-.577,21.921,21.921,0,0,1,5.854.6,12.406,12.406,0,0,0,3.533.488,14.3,14.3,0,0,0,3.76-.485.723.723,0,0,1,.788.3,1.832,1.832,0,0,1,.347,1.117v6.394c0,.8-.423,1.447-.946,1.447h-.041l-.355,2.172Zm-20.842-13.63v-8.688l.78-.213a37.2,37.2,0,0,1,20.7,0l.781.213v8.389h-1.895v-5.946a35.328,35.328,0,0,0-18.473,0v6.247Zm11.531-.319c0-1.156,1.437-2.091,3.212-2.091s3.209.935,3.209,2.091Zm-7.268,0c0-1.156,1.437-2.091,3.211-2.091s3.212.935,3.212,2.091Z"
+                                    fill="#454851" />
+                            </g>
                         </svg>
+
                     </span>
 
                     <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24"
-                            height="16" viewBox="0 0 24 16">
-                            <image id="bath" width="24" height="16"
-                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAABqUlEQVQ4jaXUz4tOURgH8M8wSJRYTby9ERHF3d66RBgxJSwtp5R/gK29qLFnYeytFDZK9OqNold+baT8bBYWojTI6EzPHbfbzHuH91u3e87pOd/veZ7zfc7Q6OETBsA6fC3y7OdCFEtq8224hzvYsAjdg2iXk063d6AesHTzlu3V+Xkcxyb8CKF+eI5j795PHWq3Rjrt1sibeuxwbf6iMn65iAzWp4NjaqGAusAE3mIrbjeQp3LORKancWG+oPolr8F97MRv3I0vrbewHCfxC1fwucizM/1OUc0gbb4e5MIA+1FErT9gbyLFY4xiuiHLWYFr2BU1Ty74jpWVmE/JDCG2Ktb24BW+dLq9fvxPk8AlXMSyWEy1Xxvj6aixuJv5sCKyr2IoxhPDke5rnMINjIU9x5rSb8DlIs+elI02Gf+jeIQdA5LPcZYCnYrvd2PjgOTJFA+qAsnPfe32jzhb5NmM2lt0E+Nhw/9F2jte5Nmtcn+9k6/iSFzys3jwkjVXR2zpjnS61Gzf4vsY/bOvyLPEMYe6QMK5cFUiaESRZ7MxnW7vYXT9X+APkQRcxU/3cF0AAAAASUVORK5CYII=" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            data-bs-toggle="tooltip" data-bs-placement="right" title="4" ref="bath">
+                            <path id="Color_Overlay" data-name="Color Overlay"
+                                d="M490.993,2074l-.437-1.763a38.127,38.127,0,0,1-13.12,0L477,2074h-.8l.331-2.053c-1.545-.855-2.216-3.411-2.563-5-.284-1.3-.743-3.373-.982-4.45.373.008.757.022,1.154.031a1.738,1.738,0,0,0,.2.451l2.573,3.554.868-1.557-1.293-2.391c.4.008.819.014,1.237.021,1,.011,2.035.023,3.086.033s2.119.009,3.186.015,2.137-.008,3.187-.015,2.085-.025,3.086-.035c1.7-.021,3.307-.074,4.734-.109-.238,1.076-.7,3.153-.983,4.451-.346,1.586-1.017,4.142-2.562,5l.331,2.053Zm-16.533-11.228a1.732,1.732,0,0,1-.045-1.582l2.094-4.032.005.008c.025-.044.045-.094.074-.136a1.118,1.118,0,0,1,.9-.584.912.912,0,0,1,.538.187l.014.012,2.359,1.314,3.4-.578.184,1.72.5-.412c.345-.288.76-.147,1.012.339l.855,1.647h8.3c1.535,0,1.336,1.578,1.336,1.578H476.309l-.22-.407,1.15-2.637-1.374,2.658,1.681,3.111-.647,1.16Zm5.914-2.1h1.72l1.8-1.5-3.412,1.066a.4.4,0,0,1-.086.017h-.012c-.017,0-.034,0-.052,0l-1.629-2.685Zm-8.366,1.578s-.2-1.578,1.336-1.578h1.035l-.109.348a2.17,2.17,0,0,0-.177,1.229Zm14.308-4.7c0-.718.32-1.076.641-1.076s.641.358.641,1.076-.32,1.074-.641,1.074S486.317,2058.271,486.317,2057.555Zm2.506-1.519c0-.446.2-.668.4-.668s.4.222.4.668-.2.669-.4.669S488.822,2056.482,488.822,2056.036Zm-13.1-1.117a4.045,4.045,0,0,1,.219-3.782,1.284,1.284,0,0,1,1.016-.612,1.48,1.48,0,0,1,1.236.979,4.04,4.04,0,0,1-.218,3.778,1.287,1.287,0,0,1-1.018.615A1.479,1.479,0,0,1,475.724,2054.919Zm12.02.139c0-.291.13-.436.26-.436s.26.145.26.436-.13.437-.26.437S487.743,2055.349,487.743,2055.057Zm.79-2.06c0-.576.257-.863.515-.863s.515.287.515.863-.257.864-.515.864S488.534,2053.573,488.534,2053Zm2.668-2.007c0-.291.13-.437.26-.437s.26.146.26.437-.13.438-.26.438S491.2,2051.282,491.2,2050.99Zm-3.752-.321c0-.446.2-.669.4-.669s.4.222.4.669-.2.667-.4.667S487.449,2051.114,487.449,2050.669Z"
+                                transform="translate(-472 -2050)" fill="#454851" />
                         </svg>
+
                     </span>
 
 
                     <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16"
-                            height="17" viewBox="0 0 16 17">
-                            <image id="beachfront" width="16" height="17"
-                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAABYElEQVQ4jY3TzUtVURQF8N97GoSKGkETQ6UXlGA0KFAcNUmzJgYKzqIMGpdNGjVr0B9QNMlGDhskQdRfkGiTmkUQDYpyIuqD1xfIlnPhcnofLbhc7j57r7P3XutWLl66qgP6UEc/TmG9nF5tUXsZr7CLTdxMRAN5Ynf2XcFj3MIf3MNH3MaTdL6E59iOgq7aybEywX3cxV8sYAoPMZqKA+M4hE/RYXmE4VQceIBz6bYcNWxhJR/hCwZxHp/xGg0cbkISBNOYzJcYrb/Fd5zFESyneCPl1Iv5MddKhQJRdDopciK1/QYj6fxMrkKOHiziBr6ld8j5LOX1diKYxy+slWJ7uJOMVe1EcB2r+JnFY+FXMNtuByHXhVK7OX7jRTuCuP093rVrsRVBxK8VZmmHZv/CEGZwHB9CKvxI3vgHQRBOC3nmMJG2WyDcWCDMs4GXeIqdguAovuJRev4Hxw4IsA/TYEGV9jJASgAAAABJRU5ErkJggg==" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                            data-bs-toggle="tooltip" data-bs-placement="right" title=" beach" ref="beach">
+                            <g id="beachfront" transform="translate(-537 -2054)">
+                                <g id="beachfront-2" data-name="beachfront" transform="translate(536.285 2053.31)">
+                                    <path id="Path_95" data-name="Path 95"
+                                        d="M9.605,16.15H7.75l3.438-8.819a11.7,11.7,0,0,1,2.745,1.555c1.248-2.639,1.054-5.367-.758-7.017C8.917,2.5,7.43,4.394,6.523,6.223A11.716,11.716,0,0,1,10,6.886L6.346,16.116H6.164c-.939,0-5.448.666-5.448,1.574h14.45c0-.908-4.622-1.54-5.56-1.54" />
+                                    <path id="Path_96" data-name="Path 96"
+                                        d="M14.881,2.937a8.548,8.548,0,0,1,0,6.743,5.008,5.008,0,0,1,1.765,1.1,6.572,6.572,0,0,1,.785.817,7.318,7.318,0,0,0,.284-2.173,8.2,8.2,0,0,0-2.834-6.487" />
+                                    <path id="Path_97" data-name="Path 97"
+                                        d="M5.593,5.77a8.929,8.929,0,0,1,5.855-4.541,7.408,7.408,0,0,0-1.6-.173,7.006,7.006,0,0,0-6.8,4.279,7.025,7.025,0,0,1,2.541.436" />
+                                    <path id="Path_98" data-name="Path 98"
+                                        d="M12.6,1.21c.238,0,.43-.116.43-.26S12.841.69,12.6.69s-.43.116-.43.26.192.26.43.26" />
+                                </g>
+                                <path id="Color_Overlay" data-name="Color Overlay"
+                                    d="M537,2071c0-.908,4.509-1.574,5.449-1.574h.182l3.654-9.23a11.714,11.714,0,0,0-3.477-.663c.906-1.83,2.394-3.723,6.652-4.354,1.812,1.65,2.006,4.377.758,7.017a11.685,11.685,0,0,0-2.745-1.555l-3.438,8.818h1.855c.939,0,5.559.633,5.56,1.541Zm15.931-6.909a5.016,5.016,0,0,0-1.765-1.1,8.552,8.552,0,0,0,0-6.743,8.2,8.2,0,0,1,2.834,6.486,7.31,7.31,0,0,1-.284,2.174A6.577,6.577,0,0,0,552.931,2064.091Zm-13.594-5.448a7.006,7.006,0,0,1,6.8-4.279,7.414,7.414,0,0,1,1.6.174,8.929,8.929,0,0,0-5.854,4.541A7.035,7.035,0,0,0,539.337,2058.643Zm9.121-4.383c0-.144.193-.26.431-.26s.43.116.43.26-.193.26-.43.26S548.457,2054.4,548.457,2054.26Z"
+                                    fill="#454851" />
+                            </g>
                         </svg>
+
                     </span>
 
 
                     <span class="icons__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                            data-bs-toggle="tooltip" data-bs-placement="right" title="Pool" ref="pool">
                             <g id="pool" transform="translate(-574 -2054)">
                                 <g id="pool-2" data-name="pool" transform="translate(573.998 2052.786)">
                                     <path id="Path_103" data-name="Path 103"
@@ -72,7 +98,6 @@
                                     fill="#454851" />
                             </g>
                         </svg>
-
                     </span>
                 </div>
                 <div class="btn__area"><button>Book Now</button></div>
@@ -83,9 +108,19 @@
 
 <script>
 //import SwipperOne from "./SwipperOne.vue";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Tooltip } from "bootstrap"
+
+new Tooltip(document.body, {
+    selector: "[data-bs-toggle='tooltip']",
+})
 
 export default {
     components: {//SwipperOne
+    }, mounted() {
+        console.log(this.$refs.bed);
+        new Tooltip(this.$refs.bed);
     }, data() {
         return {
             mainimage: require("@/assets/1.png"),
@@ -107,7 +142,8 @@ export default {
 
 <style lang="scss" scoped>
 .cart {
-    width: 35%;
+    margin-top: 50px;
+    width: 90%;
     height: 35vh;
     background-color: white;
     display: flex;
@@ -116,18 +152,23 @@ export default {
 
     @media (max-width:770px) {
 
-        width: 48%;
+        width: 88%;
+        height: 30vh;
 
     }
 
     @media (max-width:426px) {
-        width: 86%;
+        width: 89%;
+        height: 61vh;
     }
 
     .cart__conatiner {
         width: 100%;
         height: 100%;
         display: flex;
+         @media (max-width:426px) {
+      flex-direction: column;
+    }
 
         .swipper__contianer {
             flex: 1;
@@ -177,19 +218,22 @@ export default {
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
+                    width: 100%;
 
                     .slider__images__item {
                         flex: 1;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
                         cursor: pointer;
+                        height: 100%;
+                        position: relative;
 
                         img {
+                            position: absolute;
                             width: 100%;
                             height: 100%;
-
+                            cursor: pointer;
                         }
                     }
 
@@ -208,29 +252,35 @@ export default {
             align-items: center;
             justify-content: space-evenly;
 
+
             h3 {
-                width: 100%;
+                width: 80%;
                 display: flex;
                 justify-content: flex-start;
                 color: black;
-                margin-left: 18px;
+
                 margin-top: 25px;
             }
 
             p {
-                width: 90%;
+                width: 80%;
                 color: black;
-                font-size: 14px;
+                font-size: 20px;
             }
 
             .icons {
-                width: 90%;
+                width: 80%;
                 display: flex;
                 justify-content: flex-start;
 
                 .icons__item {
                     color: gray;
                     margin-right: 25px;
+
+                    svg {
+                        width: 36px;
+                        height: 26px;
+                    }
                 }
 
             }
@@ -241,13 +291,14 @@ export default {
                 justify-content: flex-start;
 
                 button {
-                    margin-left: 15px;
+                    margin-left: 25px;
                     padding: 12px;
-                    width: 40%;
+                    width: 50%;
                     background-color: #f31131;
                     border-radius: 41px;
                     border: none;
                     color: white;
+                    cursor: pointer;
 
                     @media (max-width:770px) {
                         margin-bottom: 21px;
@@ -255,7 +306,10 @@ export default {
 
                     }
 
-                    @media (max-width:426px) {}
+                    @media (max-width:426px) {
+                        padding: 6px;
+                        margin-top: 15px;
+                    }
                 }
             }
 
