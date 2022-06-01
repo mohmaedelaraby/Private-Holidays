@@ -164,7 +164,7 @@ export default {
                 cursor: pointer;
                  transition: 0.3s ease-in-out ;
                     &:hover{
-                        color: #a40e22;
+                        background-color: #a40e22;
                         transition: 0.3s ease-in-out ;
                     }
 
