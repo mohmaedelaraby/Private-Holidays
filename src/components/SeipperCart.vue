@@ -295,6 +295,11 @@ export default {
                     border: none;
                     color: white;
                     cursor: pointer;
+                     transition: 0.3s ease-in-out ;
+                    &:hover{
+                        color: #a40e22;
+                        transition: 0.3s ease-in-out ;
+                    }
 
                     @media (max-width:770px) {
                         margin-bottom: 21px;
