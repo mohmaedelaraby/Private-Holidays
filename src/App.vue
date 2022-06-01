@@ -73,4 +73,5 @@ export default {
   .swiper-pagination{
     height: 20px;
   }
+  
 </style>

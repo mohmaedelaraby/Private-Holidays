@@ -1,9 +1,15 @@
 <template>
+<section>
+<div class="row">
     <header :class="{ 'scrolled__nav': scrollPostion }">
         <nav>
-            <div class="logo">
+           <div class="col-lg-4 col-sm-4 ">
+   <div class="logo">
                 <img src="@/assets/PrivateeHolidays.svg" alt="logo">
             </div>
+  </div>
+  <div class="col-lg-8 col-sm-8 ">
+  
             <ul v-if="!mobile" class="navigation">
                 <li class="navigation__item">Home</li>
                 <li class="navigation__item">Experience</li>
@@ -48,8 +54,16 @@
                     <li class="navigation__item">Contacts</li>
                 </ul>
             </div>
+  </div>
         </nav>
     </header>
+  
+</div>
+
+</section>
+
+
+    
 </template>
 
 <script>
@@ -90,7 +104,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
+section{
+    width: 100%;
+    .row{
+        width: 100%;
+        header {
     background-color: white;
     z-index: 99;
     width: 100%;
@@ -211,4 +229,7 @@ header {
 
     }
 }
+    }
+}
+
 </style>

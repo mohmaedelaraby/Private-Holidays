@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <VcalnderVmulti/>
-        <SwiperTwo/>
-        <NestedSwipper/>
-        <SwipperThree/>
-    </div>
+    <section>
+      <VcalnderVmulti></VcalnderVmulti>
+      <SwiperTwo/>
+      <NestedSwipper/>
+      <SwipperThree/>
+    </section>
 </template>
 
 <script>
