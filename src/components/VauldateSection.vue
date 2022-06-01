@@ -1,29 +1,37 @@
 <template>
-    <div class="outer">
-        <div class="inner">
-            <img src="@/assets/vualdata.png" alt="banner" loading="lazy">
-            <div class="inner__layout">
-                <p>Send us a message</p>
-                <label>
-                    <input v-model="Name" placeholder="YourName">
-                    <div v-if="v$.Name.$error">Name field has an error.</div>
-                </label>
-                <label>
-                    <input v-model="email" placeholder="Email">
-                    <div v-if="v$.email.$error">Email field has an error.</div>
-                </label>
-                <label>
-                    <input v-model="message" placeholder="Message">
-                    <div v-if="v$.message.$error">Message field has an error.</div>
-                </label>
-                <div class="btn__area">
-                    <button @click="submit()">SEND</button>
-                    <span v-if="done"> Succesful Send </span>
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <div class="outer">
+                    <div class="inner">
+                        <img src="@/assets/vualdata.png" alt="banner" loading="lazy">
+                        
+                        <div class="inner__layout">
+                            <p>Send us a message</p>
+                            <label>
+                                <input v-model="Name" placeholder="YourName">
+                                <div v-if="v$.Name.$error">Name field has an error.</div>
+                            </label>
+                            <label>
+                                <input v-model="email" placeholder="Email">
+                                <div v-if="v$.email.$error">Email field has an error.</div>
+                            </label>
+                            <label>
+                                <input v-model="message" placeholder="Message">
+                                <div v-if="v$.message.$error">Message field has an error.</div>
+                            </label>
+                            <div class="btn__area">
+                                <button @click="submit()">SEND</button>
+                                <span v-if="done"> Succesful Send </span>
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 </template>
 
 <script>
@@ -72,6 +80,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+
     @media (max-width:770px) {
         height: 59vh;
     }
@@ -104,8 +113,8 @@ export default {
             right: 20%;
 
             @media (max-width:781px) {
-                   width: 48%;
-    height: 91%;
+                width: 48%;
+                height: 91%;
             }
 
             @media (max-width:426px) {
@@ -183,10 +192,11 @@ export default {
                     border: none;
                     color: white;
                     cursor: pointer;
-                    transition: 0.3s ease-in-out ;
-                    &:hover{
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
                         background-color: #a40e22;
-                        transition: 0.3s ease-in-out ;
+                        transition: 0.3s ease-in-out;
                     }
 
                     @media (max-width:781px) {

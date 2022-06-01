@@ -93,6 +93,7 @@ section {
    background-color: #ecf0f1;
   
   h1 {
+    padding-top: 50px;
     color: black;
    
     text-align: center;
@@ -113,16 +114,9 @@ section {
   }
 
   .swiper__bg {
-    background-color: #ecf0f1;
-    height: 62vh;
-
-    @media (max-width: 770px) {
-      height: 125vh;
-    }
-
-    @media (max-width: 426px) {
-      height: 200vh;
-    }
+   
+    padding-bottom: 4%;
+  
 
     .swiper-horizontal>.swiper-scrollbar {
       width: 100%;

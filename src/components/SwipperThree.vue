@@ -141,16 +141,17 @@ section {
 
   .swiper__bg {
     background-color: #ecf0f1;
-    height: 40vh;
+  
     padding-top: 4%;
+    padding-bottom: 4%;
 
     @media (max-width:770px) {
-      height: 64vh;
+      
     }
 
     @media (max-width:426px) {
       padding-top: 10%;
-      height: 66vh;
+      
     }
 
     .swiper-horizontal>.swiper-scrollbar {
