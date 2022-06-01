@@ -94,10 +94,10 @@ section{
   background-color: #ecf0f1;
   height: 50vh;
   @media (max-width: 770px) {
-    height: 33vh;
+    height: 54vh;
   }
-  @media (max-width: 770px) {
-    height: 28vh;
+  @media (max-width: 330px) {
+    height: 50vh;
   }
 
  
@@ -125,15 +125,15 @@ h1 {
 
 .swiper__bg {
   background-color: #ecf0f1;
-  height: 50vh;
+  height: 32vh;
   padding-top: 4%;
   @media (max-width:770px) {
-    height: 26vh;
+    height: 45vh;
   }
 
   @media (max-width:426px) {
     padding-top: 10%;
-    height: 22vh;
+    height: 42vh;
   }
 
   .swiper-horizontal>.swiper-scrollbar {
