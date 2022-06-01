@@ -105,12 +105,12 @@ section {
     padding-top: 4%;
 
     @media (max-width:770px) {
-      height: 35vh;
+      height: 64vh;
     }
 
     @media (max-width:426px) {
       padding-top: 10%;
-      height: 35vh;
+      height: 66vh;
     }
 
     .swiper-horizontal>.swiper-scrollbar {

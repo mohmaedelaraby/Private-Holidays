@@ -73,11 +73,11 @@ export default {
     align-items: center;
     justify-content: center;
     @media (max-width:770px) {
-        height: 41vh;
+        height: 59vh;
     }
 
     @media (max-width:426px) {
-        height: 33vh;
+        height: 45vh;
     }
 
     .inner {
@@ -104,8 +104,8 @@ export default {
             right: 20%;
 
             @media (max-width:781px) {
-                width: 45%;
-                height: 72%;
+                   width: 48%;
+    height: 91%;
             }
 
             @media (max-width:426px) {
@@ -186,6 +186,7 @@ export default {
 
                     @media (max-width:781px) {
                         margin-bottom: 15px;
+                        margin-left: 12%;
                     }
 
                     @media (max-width: 426px) {

@@ -91,10 +91,7 @@ export default {
 <style lang="scss" scoped>
 section {
    background-color: #ecf0f1;
-    @media (max-width:426px) {
   
-    height: 135vh;
-  }
   h1 {
     color: black;
    
@@ -117,10 +114,14 @@ section {
 
   .swiper__bg {
     background-color: #ecf0f1;
-    height: 73vh;
+    height: 62vh;
+
+    @media (max-width: 770px) {
+      height: 125vh;
+    }
 
     @media (max-width: 426px) {
-      height: 171vh;
+      height: 200vh;
     }
 
     .swiper-horizontal>.swiper-scrollbar {

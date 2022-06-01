@@ -88,7 +88,7 @@ export default {
     justify-content: center;
 
     @media (max-width:320px) {
-        height: 17vh;
+        height: 27vh;
     }
 
     .vcvm__form {
@@ -104,9 +104,9 @@ export default {
 
 
         @media (max-width:770px) {
-            top: 70%;
-            width: 90%;
-            height: 13%;
+         top: 73%;
+    width: 93%;
+    height: 17%;
         }
 
         @media (max-width:426px) {
@@ -116,10 +116,10 @@ export default {
         }
 
         @media (max-width:320px) {
-            top: 21%;
-            width: 95%;
-            height: 19%;
-            flex-direction: column;
+           top: 21%;
+    width: 95%;
+    height: 35%;
+    flex-direction: column;
         }
 
         .vcvm__form__choice {
@@ -166,6 +166,9 @@ export default {
                 @media (max-width:780px) {
                     width: 100%;
                     margin-right: 20px;
+                    padding: 10px;
+                    font-size: 14px;
+                    cursor: pointer;
                 }
 
                 @media (max-width:320px) {

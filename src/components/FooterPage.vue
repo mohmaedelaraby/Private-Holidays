@@ -98,7 +98,7 @@ section{
     width: 100%;
     
     @media (max-width: 325px) {
-        height: 195vh;
+        height: 329vh;
     }
     .row{
         width: 100%;

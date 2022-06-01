@@ -55,6 +55,10 @@ export default {
                width: 15%;
     height: 61%;
          }
+         @media (max-width: 320px) {
+               width: 10%;
+    height: 61%;
+         }
        }
       
     input {
