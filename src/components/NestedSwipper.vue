@@ -26,6 +26,7 @@
   </section>
 </template>
 <script>
+
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 

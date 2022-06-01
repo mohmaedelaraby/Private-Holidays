@@ -52,7 +52,6 @@
                     <li class="footer__list__item">Allepey</li>
                     <li class="footer__list__item">Darjeeling</li>
                     <li class="footer__list__item">Goa</li>
-                    <li class="footer__list__item">Mahabaleshwar</li>
                     <li class="footer__list__item">Agra</li>
                      </ul>
                 </div>
@@ -180,7 +179,7 @@ section{
                 height: 95%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: flex-end;
 
                 .footer__info__upper{
                     display: flex;

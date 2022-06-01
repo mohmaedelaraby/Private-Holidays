@@ -68,7 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 .outer {
-    height: 75vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +98,8 @@ export default {
             flex-direction: column;
             align-items: center;
             background-color: white;
-            width: 24%;
-            height: 45%;
+            width: 28%;
+            height: 60%;
             bottom: 0;
             right: 20%;
 
@@ -136,7 +136,7 @@ export default {
             }
 
             label {
-                width: 300px;
+                width: 320px;
                 overflow-x: hidden;
                 overflow-y: hidden;
                 margin-top: 15px;

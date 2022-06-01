@@ -92,6 +92,13 @@ export default {
 
 section{
   background-color: #ecf0f1;
+  height: 50vh;
+  @media (max-width: 770px) {
+    height: 33vh;
+  }
+  @media (max-width: 770px) {
+    height: 28vh;
+  }
 
  
 h1 {

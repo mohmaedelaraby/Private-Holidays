@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .outer{
-    height: 100vh;
+    height: 72vh;
     display: flex;
     align-items: center;
     justify-content: center;

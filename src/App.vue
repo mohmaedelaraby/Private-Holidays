@@ -56,6 +56,7 @@ export default {
  .swiper-pagination-bullet {
       border-radius: 0px;
       background: transparent;
+      transform: rotate(45deg);
       width: 5px;
       height: 5px;
       border: 0.5px solid;
@@ -64,6 +65,7 @@ export default {
 
  .swiper-pagination-bullet-active {
     background-color: black;
+    transform: rotate(45deg);
       width: 7px;
       height: 7px;
    

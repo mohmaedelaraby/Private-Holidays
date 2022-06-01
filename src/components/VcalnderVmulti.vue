@@ -92,7 +92,7 @@ export default {
     }
 
     .vcvm__form {
-        top: 100%;
+        top: 72%;
         left: 50;
         position: absolute;
         width: 85%;
