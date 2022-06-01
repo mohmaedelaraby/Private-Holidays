@@ -188,6 +188,9 @@ section {
     @media (max-width: 770px) {
       left: 128px;
     }
+    @media (max-width: 320px) {
+      left: 111px;
+    }
         }
       }
       .slide__header {

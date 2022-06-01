@@ -5,8 +5,7 @@
        <h1>See latest vacation ideas</h1>
     </div>
     <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
+      <div class="col-sm-12 col-lg-12">
            <swiper :modules="modules" :slides-per-view="3" :space-between="50" :keyboard="{ enabled: true, }" navigation
       :pagination="{ clickable: true }" :breakpoints="swiperOptions.breaks" class="swiper__bg">
       <swiper-slide v-for="item in 5" v-bind:key="item" class="slide">
@@ -25,8 +24,6 @@
 
           </div>
         </div>
-
-
       </swiper-slide>
     </swiper>
       </div>
@@ -127,7 +124,7 @@ section {
 
   .swiper__bg {
     background-color: #ecf0f1;
-    height: 40vh;
+    height: 35vh;
     padding-top: 4%;
 
     @media (max-width:770px) {
@@ -184,15 +181,15 @@ section {
             @media (max-width:770px) {
               width: 60%;
               height: 35%;
-              bottom: 10%;
-              left: 14%;
+              bottom: 15%;
+              left: 20%;
             }
 
             @media (max-width:426px) {
               width: 60%;
               height: 35%;
               bottom: 10%;
-              left: 13%;
+              left: 21%;
 
 
             }
