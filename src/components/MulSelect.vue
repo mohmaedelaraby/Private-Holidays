@@ -6,30 +6,55 @@
       :options="options"
       :placeholder="placeholder"
       :searchable="false"
-      @click="$emit('result' , this.value )"
-     
+      @click="submit"
     />
+    <div v-if="v$.value.$error" class="warn">{{placeholder}} is embty.</div>
+    
   </div>
 </template>
 
 <script>
   import Multiselect from '@vueform/multiselect'
-  
+  import useVuelidate from '@vuelidate/core'
+import { required } from '@vuelidate/validators'
 
   export default {
+     setup() {
+        return { v$: useVuelidate() }
+    },
     components: {
       Multiselect,
     },
     props:['title' , 'list'],
+     emits:['result'],
     data() {
       return {
         
-        value: "",
+        value: '',
         options: this.list,
         placeholder:this.title
       }
     },
-     emits:['result']
+    validations() {
+        return {
+            value: { required }, // Matches this.firstName
+        }
+    },methods: {
+        async submit() {
+
+            const result = await this.v$.$validate()
+            if (!this.v$.$error) {
+                console.log("mul done", result)
+                this.$emit('result' , this.value );
+                this.done = true;
+            }
+            else {
+                console.log("mul error")
+            }
+            // perform async actions
+
+        }
+    }
   }
 </script>
 
@@ -38,8 +63,13 @@
  .multiselect{ 
     font-size: 12px;
   }
+
   .multiselect-option{
     font-size: 12px;
+  }
+  .warn{
+    font-size: 10px;
+    color: red;
   }
 @media (max-width:426px) {
   .multiselect{ 
