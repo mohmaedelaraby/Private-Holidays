@@ -139,7 +139,7 @@ export default {
 .cart {
     margin-top: 50px;
     width: 90%;
-    height: 26vh;
+    
     background-color: white;
     display: flex;
     align-items: center;
@@ -147,17 +147,17 @@ export default {
 
     @media (max-width:770px) {
     width: 82%;
-    height: 52vh;
+   
     }
 
     @media (max-width:426px) {
           width: 89%;
-    height: 92vh;
+ 
     }
 
     .cart__conatiner {
         width: 100%;
-        height: 100%;
+       
         display: flex;
 
         @media (max-width:426px) {
@@ -166,7 +166,7 @@ export default {
 
         .swipper__contianer {
             flex: 1;
-            height: 100%;
+           
             display: flex;
             align-items: center;
             justify-content: center;
@@ -174,7 +174,6 @@ export default {
             .swipper__contianer__slider {
                 width: 100%;
                 height: 100%;
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;

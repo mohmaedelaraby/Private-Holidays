@@ -1,12 +1,12 @@
 <template>
 
-  <div id="app">
+ 
     <NavBar></NavBar>
     <HomeBanner></HomeBanner>
     <MiddelPage/>
     <VauldateSection/>
     <FooterPage/>
-  </div>
+ 
 
 </template>
 

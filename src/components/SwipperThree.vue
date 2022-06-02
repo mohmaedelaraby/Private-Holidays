@@ -13,10 +13,12 @@
               <div class="row">
                 <div class="col-lg-3"> </div>
                 <div class="col-lg-6">
-                  <span>
+                  <div class="img__conatiner">
                 <img src="@/assets/Ellipse.png" alt="slider" loading="lazy" />
-                <img src="@/assets/VectorSmartObject.svg" alt="slider" loading="lazy" class="vector" />
-              </span>
+                <div class="vector__container">
+                  <img src="@/assets/VectorSmartObject.svg" alt="slider" loading="lazy" class="vector" />
+                </div>
+              </div>
                 </div>
                  <div class="col-lg-3"> </div>
               </div>
@@ -143,7 +145,6 @@ section {
     background-color: #ecf0f1;
   
     padding-top: 4%;
-    padding-bottom: 4%;
 
     @media (max-width:770px) {
       
@@ -167,7 +168,7 @@ section {
       width: 100%;
       .row{
         
-      span {
+      .img__conatiner {
 
         position: relative;
         width: 100%;
@@ -180,19 +181,15 @@ section {
         img {
           margin-top: 25px;
         }
-
-        .vector {
+        .vector__container{
           position: absolute;
-    top: 43%;
-    left: 53px;
-    transform: translate(50%, -50%);
-    @media (max-width: 770px) {
-      left: 128px;
-    }
-    @media (max-width: 320px) {
-      left: 111px;
-    }
+       
+           .vector {
+      
         }
+        }
+
+       
       }
       .slide__header {
         font-size: 30px;
