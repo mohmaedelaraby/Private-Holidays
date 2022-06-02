@@ -170,6 +170,7 @@ section{
         .logo {
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             img {
                 width: 100%;

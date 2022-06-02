@@ -165,6 +165,7 @@ section{
                 font-size: 14px;
                 color: white;
                 padding-top: 8px;
+                cursor: pointer;
                 @media (max-width: 780px) {
                 font-size: 11px;
             }
