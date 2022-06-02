@@ -22,7 +22,7 @@
         </div>
       </template>
     </v-date-picker>
-    <div style="display: flex; align-items: center; justify-content: center; color: red; font-size: 10px;">
+    <div style="display: flex; align-items: center; justify-content: center; color: red; font-size: 8px;">
     {{currentStatus}}
     </div>
   </div>
@@ -64,7 +64,7 @@ export default {
       if(this.start!==null&&this.end!==null &&this.start>this.end)
       {
         console.log("start is bigger than end")
-        this.currentStatus="end date limit the start"
+        this.currentStatus="Error"
       }
       else{
         console.log("correct")
