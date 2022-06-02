@@ -4,7 +4,7 @@
       <template v-slot="{ start, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
-            <input :value="start" v-on="inputEvents" :placeholder="placeholderStart" />
+            <input :value="start" v-on="inputEvents" :placeholder="placeholderStart"  />
             <img src="@/assets/dropdown.png" alt="drop" />
           </span>
         
@@ -25,12 +25,17 @@
     <div style="display: flex; align-items: center; justify-content: center; color: red; font-size: 8px;">
     {{currentStatus}}
     </div>
+    <!-- <button @click="submit">click</button> -->
   </div>
 </template>
 
 <script>
-
+/*  import useVuelidate from '@vuelidate/core'
+import { required } from '@vuelidate/validators' */
 export default {
+    /*  setup() {
+        return { v$: useVuelidate() }
+    }, */
   data() {
     return {
         start: new Date(),
@@ -39,18 +44,29 @@ export default {
         placeholderEnd:" ",
         currentStatus:" ", 
     };
-  },
+  }, /*  validations() {
+        return {
+            start: {
+        required,
+        minValue: value => value > new Date()
+        },
+        end: {
+        required,
+        maxValue: value => value > new Date()
+        }
+        }
+    }, */
   emits: ['start', 'end'],
   watch: {
     start: function (date) {
-      console.log("startDate",this.start);
+     
       this.$emit("start", {
         start: date,
         end: this.end,
       });
     },
     end: function (date) {
-      console.log("endDate",this.end);
+    
       this.$emit("end", {
         start: this.start,
         end: date,
@@ -61,19 +77,31 @@ export default {
     this.placeholderEnd=this.end.toString().slice(0,16);
   },
     updated(){
-      if(this.start!==null&&this.end!==null &&this.start>this.end)
+      if(this.start!==null&&this.end!==new Date() &&this.start>this.end)
       {
-        console.log("start is bigger than end")
-        this.currentStatus="Error"
+      
+        this.currentStatus=" error"
       }
       else{
-        console.log("correct")
+     
           this.placeholderStart=this.start.toString().slice(0,16);
     this.placeholderEnd=this.end.toString().slice(0,16);
         this.currentStatus=" "
       }
     }
-  
+  ,/* methods: {
+        async submit() {
+
+            const result = await this.v$.$validate()
+            if (!this.v$.$error) {
+                console.log(result)
+            
+            }
+            else{console.log("errrrrr")}
+            // perform async actions
+
+        }
+    } */
 
 };
 </script>

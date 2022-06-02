@@ -106,7 +106,7 @@ section {
     text-align: center;
     font-weight: 100;
     font-size: 50px;
-    padding-top: 80px;
+    padding-top: 10%;
     padding-bottom: 30px;
 
     @media (max-width:770px) {
