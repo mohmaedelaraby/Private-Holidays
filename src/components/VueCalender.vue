@@ -39,7 +39,7 @@ export default {
   data() {
     return {
         start: new Date(),
-        end: new Date() ,
+        end:  new Date().toString().slice(0,16),
         placeholderStart:" ",
         placeholderEnd:" ",
         currentStatus:" ", 
