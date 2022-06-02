@@ -77,7 +77,7 @@ export default {
     this.placeholderEnd=this.end.toString().slice(0,16);
   },
     updated(){
-      if(this.start!==null&&this.end!==new Date() &&this.start>this.end)
+      if(this.start!==null&&this.end!==null &&this.start>this.end)
       {
       
         this.currentStatus=" error"
