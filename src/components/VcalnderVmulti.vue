@@ -81,7 +81,6 @@ export default {
 <style lang="scss" scoped>
 .VCVM {
     width: 100%;
-    height: 10vh;
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
@@ -96,7 +95,7 @@ export default {
         left: 50;
         position: absolute;
         width: 85%;
-        height: 15%;
+        height: 22%;
         background-color: white;
         display: flex;
         align-items: center;

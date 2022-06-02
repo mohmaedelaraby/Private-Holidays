@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 .outer {
-    height: 55vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +108,7 @@ export default {
             align-items: center;
             background-color: white;
             width: 28%;
-            height: 60%;
+           
             bottom: 0;
             right: 20%;
 
@@ -148,16 +148,17 @@ export default {
                 width: 320px;
                 overflow-x: hidden;
                 overflow-y: hidden;
-                margin-top: 15px;
+                margin-top: 10px;
+                margin-bottom: 10px;
 
                 @media (max-width:781px) {
                     width: 270px;
                     margin-top: 5px;
+                    margin-bottom: 5px;
                 }
 
                 @media (max-width:426px) {
                     width: 242px;
-                    margin-top: 9px;
                 }
 
                 input {
@@ -177,7 +178,8 @@ export default {
 
             .btn__area {
                 width: 100%;
-                margin-top: 50px;
+               margin-bottom: 30px;
+               margin-top: 20px;
 
                 @media (max-width: 426px) {
                     margin-top: 0;
