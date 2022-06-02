@@ -54,10 +54,11 @@ export default {
             this.res.v2 = name;
         },
         getStart(name) {
-            this.res.v3 = name;
+            this.res.v3 = name.start.toString().slice(0,16);
         },
         getEnd(name) {
-            this.res.v4 = name;
+            this.res.v4 = name.end.toString().slice(0,16);
+            
         },
         async showvalues(e) {
             e.preventDefault();

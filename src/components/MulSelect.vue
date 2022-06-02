@@ -44,12 +44,9 @@ import { required } from '@vuelidate/validators'
 
             const result = await this.v$.$validate()
             if (!this.v$.$error) {
-                console.log("mul done", result)
+                console.log(result)
                 this.$emit('result' , this.value );
                 this.done = true;
-            }
-            else {
-                console.log("mul error")
             }
             // perform async actions
 

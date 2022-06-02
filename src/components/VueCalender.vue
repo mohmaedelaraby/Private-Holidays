@@ -1,20 +1,30 @@
 <template>
-  <div>
-    <v-date-picker v-model="range" is-range>
-      <template v-slot="{ inputValue, inputEvents }">
+  <div class="flex">
+    <v-date-picker v-model="start"  >
+      <template v-slot="{ start, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
-            <input :value="inputValue.start" v-on="inputEvents.start" @click="$emit('start', inputValue.start) " />
+            <input :value="start" v-on="inputEvents" :placeholder="placeholderStart" />
             <img src="@/assets/dropdown.png" alt="drop" />
-          </span>
-          <span>
-            <input :value="inputValue.end" v-on="inputEvents.end" @click="$emit('end', inputValue.end)" />
-             <img src="@/assets/dropdown.png" alt="drop" />
           </span>
         
         </div>
       </template>
     </v-date-picker>
+
+     <v-date-picker v-model="end"  >
+      <template v-slot="{ end, inputEvents }">
+        <div class="flex justify-center items-center ">
+          <span>
+            <input :value="end" v-on="inputEvents" :placeholder="placeholderEnd" />
+            <img src="@/assets/dropdown.png" alt="drop" />
+          </span>
+        </div>
+      </template>
+    </v-date-picker>
+    <div style="display: flex; align-items: center; justify-content: center; color: red; font-size: 10px;">
+    {{currentStatus}}
+    </div>
   </div>
 </template>
 
@@ -23,13 +33,48 @@
 export default {
   data() {
     return {
-      range: {
-        start: new Date().toDateString(),
-        end: new Date().toDateString()
-      },
+        start: new Date(),
+        end: new Date() ,
+        placeholderStart:" ",
+        placeholderEnd:" ",
+        currentStatus:" ", 
     };
   },
-  emits: ['start', 'end']
+  emits: ['start', 'end'],
+  watch: {
+    start: function (date) {
+      console.log("startDate",this.start);
+      this.$emit("start", {
+        start: date,
+        end: this.end,
+      });
+    },
+    end: function (date) {
+      console.log("endDate",this.end);
+      this.$emit("end", {
+        start: this.start,
+        end: date,
+      });
+    },
+  },mounted(){
+    this.placeholderStart=this.start.toString().slice(0,16);
+    this.placeholderEnd=this.end.toString().slice(0,16);
+  },
+    updated(){
+      if(this.start!==null&&this.end!==null &&this.start>this.end)
+      {
+        console.log("start is bigger than end")
+        this.currentStatus="end date limit the start"
+      }
+      else{
+        console.log("correct")
+          this.placeholderStart=this.start.toString().slice(0,16);
+    this.placeholderEnd=this.end.toString().slice(0,16);
+        this.currentStatus=" "
+      }
+    }
+  
+
 };
 </script>
 
@@ -43,7 +88,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid;
-    width: 40%;
+    width: 83%;
         @media (max-width: 769px) {
                 
                font-size: 12px;
@@ -64,7 +109,7 @@ export default {
     input {
     color: gray;
     border: none;
-    width: 62%;
+    width: 76%;
     margin-left: 15px;
  
     @media (max-width:426px) {
