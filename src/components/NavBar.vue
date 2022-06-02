@@ -105,9 +105,9 @@ export default {
 
 <style lang="scss" scoped>
 section{
-    width: 100%;
+    
     .row{
-        width: 100%;
+       
         header {
     background-color: white;
     z-index: 99;

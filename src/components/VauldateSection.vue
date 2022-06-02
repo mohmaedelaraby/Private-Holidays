@@ -115,7 +115,7 @@ export default {
 
             @media (max-width:781px) {
                 width: 48%;
-                height: 91%;
+               
             }
 
             @media (max-width:426px) {

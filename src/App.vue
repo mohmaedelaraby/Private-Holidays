@@ -38,6 +38,7 @@ export default {
   font-display:swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 * {
    margin: 0px;
