@@ -119,6 +119,7 @@ export default {
 section {
   background-color: #ecf0f1;
   width: 100%;
+  padding-bottom: 3%;
 
   h1 {
     color: black;
