@@ -79,8 +79,8 @@ export default {
     updated(){
       if(this.start!==null&&this.end!==null &&this.start>this.end)
       {
-      
-        this.currentStatus=" error"
+        console.log("time limit")
+        this.currentStatus=" "
       }
       else{
      
