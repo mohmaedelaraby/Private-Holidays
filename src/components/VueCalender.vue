@@ -1,10 +1,10 @@
 <template>
   <div class="flex">
-    <v-date-picker v-model="start" :min-date='new Date()'>
-      <template v-slot="{ start, inputEvents }">
+    <v-date-picker v-model="startD" :min-date='new Date()'  >
+      <template v-slot="{ startD, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
-            <input :value="start" v-on="inputEvents" :placeholder="placeholderStart"  />
+            <input :value="startD" v-on="inputEvents" :placeholder="placeholderStart"  />
             <img src="@/assets/dropdown.png" alt="drop" />
           </span>
         
@@ -12,7 +12,7 @@
       </template>
     </v-date-picker>
 
-     <v-date-picker v-model="end" :min-date='start' >
+     <v-date-picker v-model="end" :min-date='startD' >
       <template v-slot="{ end, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
@@ -38,7 +38,7 @@ export default {
     }, */
   data() {
     return {
-        start: new Date(),
+        startD: new Date(),
         end:  new Date().toString().slice(0,16),
         placeholderStart:" ",
         placeholderEnd:" ",
@@ -61,30 +61,30 @@ export default {
     start: function (date) {
      
       this.$emit("start", {
-        start: date,
+        startD: date,
         end: this.end,
       });
     },
     end: function (date) {
     
       this.$emit("end", {
-        start: this.start,
+        startD: this.startD,
         end: date,
       });
     },
   },mounted(){
-    this.placeholderStart=this.start.toString().slice(0,16);
+    this.placeholderStart=this.startD.toString().slice(0,16);
     this.placeholderEnd=this.end.toString().slice(0,16);
   },
     updated(){
-      if(this.start!==null&&this.end!==null &&this.start>this.end)
+      if(this.startD!==null&&this.end!==null &&this.startD>this.end)
       {
         console.log("time limit")
         this.currentStatus=" "
       }
       else{
      
-          this.placeholderStart=this.start.toString().slice(0,16);
+          this.placeholderStart=this.startD.toString().slice(0,16);
     this.placeholderEnd=this.end.toString().slice(0,16);
         this.currentStatus=" "
       }
