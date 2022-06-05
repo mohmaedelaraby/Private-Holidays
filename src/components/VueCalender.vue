@@ -4,22 +4,24 @@
       <template v-slot="{ startD, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
-            <input :value="startD" v-on="inputEvents" :placeholder="placeholderStart"  />
+            <input :value="startD" v-on="inputEvents" :placeholder="placeholderStart"     @click="submit"/>
             <img src="@/assets/dropdown.png" alt="drop" />
           </span>
-        
         </div>
+         <div v-if="v$.startD.$error" class="warn"> is embty.</div>
       </template>
+         
     </v-date-picker>
 
      <v-date-picker v-model="end" :min-date='startD' >
       <template v-slot="{ end, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
-            <input :value="end" v-on="inputEvents" :placeholder="placeholderEnd" />
+            <input :value="end" v-on="inputEvents" :placeholder="placeholderEnd"    @click="submit" />
             <img src="@/assets/dropdown.png" alt="drop" />
           </span>
         </div>
+         <div v-if="v$.end.$error" class="warn"> is embty.</div>
       </template>
     </v-date-picker>
     <div style="display: flex; align-items: center; justify-content: center; color: red; font-size: 8px;">
@@ -30,12 +32,12 @@
 </template>
 
 <script>
-/*  import useVuelidate from '@vuelidate/core'
-import { required } from '@vuelidate/validators' */
+ import useVuelidate from '@vuelidate/core'
+import { required } from '@vuelidate/validators'
 export default {
-    /*  setup() {
+      setup() {
         return { v$: useVuelidate() }
-    }, */
+    }, 
   data() {
     return {
         startD: new Date(),
@@ -44,18 +46,12 @@ export default {
         placeholderEnd:" ",
         currentStatus:" ", 
     };
-  }, /*  validations() {
+  },  validations() {
         return {
-            start: {
-        required,
-        minValue: value => value > new Date()
-        },
-        end: {
-        required,
-        maxValue: value => value > new Date()
+          startD: {required},
+        end: {required}
         }
-        }
-    }, */
+    }, 
   emits: ['start', 'end'],
   watch: {
     start: function (date) {
@@ -89,19 +85,19 @@ export default {
         this.currentStatus=" "
       }
     }
-  ,/* methods: {
+  , methods: {
         async submit() {
 
             const result = await this.v$.$validate()
             if (!this.v$.$error) {
-                console.log(result)
+                console.log("date valdation",result)
             
             }
             else{console.log("errrrrr")}
             // perform async actions
 
         }
-    } */
+    } 
 
 };
 </script>
