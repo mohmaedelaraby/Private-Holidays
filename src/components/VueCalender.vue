@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <v-date-picker v-model="start"  >
+    <v-date-picker v-model="start" :min-date='new Date()'>
       <template v-slot="{ start, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
@@ -12,7 +12,7 @@
       </template>
     </v-date-picker>
 
-     <v-date-picker v-model="end"  >
+     <v-date-picker v-model="end" :min-date='start' >
       <template v-slot="{ end, inputEvents }">
         <div class="flex justify-center items-center ">
           <span>
